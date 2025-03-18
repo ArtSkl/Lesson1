@@ -18,9 +18,13 @@ public class task2 {
         };
 
         Arrays.sort(oneDimArtSkl);
+        System.out.print(oneDimArtSkl);
 
-
-            System.out.print(oneDimArtSkl);
+        char[][] artSklSorted = {
+                {oneDimArtSkl[0], oneDimArtSkl[1], oneDimArtSkl[2]},
+                {oneDimArtSkl[3], oneDimArtSkl[4], oneDimArtSkl[5]}
+        };
+        System.out.print(" ** separator ** " + Arrays.deepToString(artSklSorted));
 
     }
 }
