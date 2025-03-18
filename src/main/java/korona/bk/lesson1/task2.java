@@ -19,8 +19,8 @@ public class task2 {
 
         Arrays.sort(oneDimArtSkl);
 
-        for (char ch : oneDimArtSkl) {
-            System.out.print(ch + " ");
-        }
+
+            System.out.print(oneDimArtSkl);
+
     }
 }
