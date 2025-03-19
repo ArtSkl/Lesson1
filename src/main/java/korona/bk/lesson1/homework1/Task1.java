@@ -1,7 +1,7 @@
-package korona.bk.lesson1;
+package korona.bk.lesson1.homework1;
 import java.util.Arrays;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
 
         int[] array = {8, 6, 9, 7, 4, 9, 0};

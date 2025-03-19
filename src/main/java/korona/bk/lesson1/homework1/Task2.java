@@ -1,8 +1,7 @@
-package korona.bk.lesson1;
-
+package korona.bk.lesson1.homework1;
 import java.util.Arrays;
 
-public class task2 {
+public class Task2 {
     public static void main(String[] args) {
 
 
