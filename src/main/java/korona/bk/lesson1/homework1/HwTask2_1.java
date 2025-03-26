@@ -5,35 +5,42 @@ import java.util.Arrays;
 public class HwTask2_1 {
     public static void main(String[] args) {
 
-
         char[][] arrSkl = {
                 {'A', 'r', 't'},
                 {'S', 'k', 'l'}
         };
 
+        int rows = arrSkl.length;
+        int cols = arrSkl[0].length;
+        char[] oneDimArr = new char[rows * cols];
+        int index = 0;
 
-        char[] oneDimArr = {
-                arrSkl[0][0], arrSkl[0][1], arrSkl[0][2],
-                arrSkl[1][0], arrSkl[1][1], arrSkl[1][2]
-        };
-        for (int i = 0; i < oneDimArr.length - 1; i++) {
-            for (int j = 0; j < oneDimArr.length - i - 1; j++) {
-                if (oneDimArr[j] > oneDimArr[j + 1]) {
-                    char temp = oneDimArr[j];
-                    oneDimArr[j] = oneDimArr[j + 1];
-                    oneDimArr[j + 1] = temp;
-                }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                oneDimArr[index++] = arrSkl[i][j];
             }
         }
 
-        System.out.print(oneDimArr);
+        for (int i = 1; i < oneDimArr.length; i++) {
+            char key = oneDimArr[i];
+            int j = i - 1;
 
-        char[][] arrSklSorted = {
-                {oneDimArr[0], oneDimArr[1], oneDimArr[2]},
-                {oneDimArr[3], oneDimArr[4], oneDimArr[5]}
-        };
+            while (j >= 0 && oneDimArr[j] > key) {
+                oneDimArr[j + 1] = oneDimArr[j];
+                j--;
+            }
+            oneDimArr[j + 1] = key;
+        }
+
+        char[][] arrSklSorted = new char[rows][cols];
+        index = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arrSklSorted[i][j] = oneDimArr[index++];
+            }
+        }
+
+        System.out.print("Одномерный массив: " + Arrays.toString(oneDimArr));
         System.out.print(" ** separator ** " + Arrays.deepToString(arrSklSorted));
-
     }
 }
-
