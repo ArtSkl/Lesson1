@@ -1,5 +1,4 @@
-package korona.bk.lesson1.homework1;
-import java.util.Arrays;
+package korona.bk.homeworks.homework1;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -16,14 +15,15 @@ public class Task2 {
                 artSkl[1][0], artSkl[1][1], artSkl[1][2]
         };
 
-        Arrays.sort(oneDimArtSkl);
+        ArrayUtils.arrCharSort(oneDimArtSkl);
         System.out.print(oneDimArtSkl);
 
         char[][] artSklSorted = {
                 {oneDimArtSkl[0], oneDimArtSkl[1], oneDimArtSkl[2]},
                 {oneDimArtSkl[3], oneDimArtSkl[4], oneDimArtSkl[5]}
         };
-        System.out.print(" ** separator ** " + Arrays.deepToString(artSklSorted));
+        System.out.print(" ** separator ** ");
+        ArrayUtils.printChar2DArray(artSklSorted);
 
     }
 }

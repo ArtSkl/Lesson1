@@ -1,4 +1,4 @@
-package korona.bk.lesson1;
+package korona.bk.lessons.lesson1;
 
 public class Ihar {
 
