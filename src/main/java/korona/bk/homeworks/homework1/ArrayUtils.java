@@ -1,6 +1,10 @@
 package korona.bk.homeworks.homework1;
 
-public class ArrayUtils {
+public final class ArrayUtils {
+
+    private ArrayUtils() {
+    }
+
     public static void printIntArray(int[] array) {
         System.out.println("[");
         for (int i = 0; i < array.length; i++) {

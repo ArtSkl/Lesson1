@@ -1,6 +1,7 @@
 package korona.bk.lessons.lesson2;
 
-public class Rectangle implements  FigureInterface {
+public class Triangle implements FigureInterface {
+
 
     @Override
     public double getSquare() {
@@ -9,8 +10,7 @@ public class Rectangle implements  FigureInterface {
 
     @Override
     public String print() {
-
-        return null;
+        return "Треугольник";
     }
 
     @Override

@@ -1,6 +1,8 @@
 package korona.bk.mentoring.oop;
 
-public class Animal {
+import java.util.Objects;
+
+public class Animal implements Comparable<Animal> {
     private int age;
     private String type;
 
@@ -50,5 +52,23 @@ public class Animal {
                 "age=" + age +
                 ", type='" + type + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Animal)) return false;
+        Animal animal = (Animal) o;
+        return age == animal.age && Objects.equals(type, animal.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, type);
+    }
+
+
+    @Override
+    public int compareTo(Animal o) {
+        return this.type.compareTo(o.getType());
     }
 }

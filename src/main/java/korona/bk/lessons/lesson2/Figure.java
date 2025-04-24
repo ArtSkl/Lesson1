@@ -4,5 +4,7 @@ public abstract class Figure {
 
     public double square;
 
-    public abstract String print();
+    // public abstract String print();
+
+
 }
