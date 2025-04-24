@@ -1,4 +1,4 @@
-package korona.bk.lesson2.homework2;
+package korona.bk.homeworks.homework2;
 
 public class HwTask1 {
     public static void main(String[] args) {
